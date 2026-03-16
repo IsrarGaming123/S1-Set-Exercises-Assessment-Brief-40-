@@ -1,0 +1,113 @@
+/* Reset default page spacing and give the whole page a soft background color */
+body {
+    margin: 0;
+    background: #d4cfc8;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* Header area where the main site title sits */
+header {
+    text-align: center; /* keeps the title centered on the page */
+    padding: 20px 0 10px; /* some breathing space above and below the title */
+    background: #d4cfc8; /* same color as the page so it blends nicely */
+}
+
+/* Styling the main heading text */
+header h1 {
+    font-size: 2.4em; /* make the title stand out */
+    font-weight: bold;
+    margin: 0 0 10px 0; /* small gap under the title */
+    font-family: Georgia, serif;
+}
+
+
+/* Navigation links under the title */
+nav a {
+    margin: 0 10px; /* space between each link */
+    color: blue; /* simple classic link color */
+    text-decoration: underline; /* keeps it looking like a clickable link */
+    font-family: Arial, Helvetica, sans-serif; /* different font so links stand out */
+    font-size: 0.95em; /* slightly smaller than normal text */
+}
+
+
+/* Main container that holds the page content */
+.content {
+    display: block;
+    max-width: 600px; /* keeps the page from stretching too wide on big screens */
+    margin: 0 auto; /* centers the whole layout */
+    padding: 0;
+}
+
+
+/* Top section that shows text on the left and an image on the right */
+.top-section {
+    display: flex; /* flex makes it easy to place items side by side */
+    flex-direction: row; /* text and image sit in a row */
+    align-items: flex-start; /* align both items at the top */
+    padding: 15px 10px 10px; /* spacing inside the section */
+    gap: 12px; /* small space between the text and image */
+}
+
+/* Text block on the left side */
+.text {
+    flex: 1.2; /* give the text slightly more space than the image */
+    font-size: 0.82em; /* smaller text size for article style */
+    line-height: 1.5; /* easier to read */
+    color: #111; /* dark gray instead of pure black */
+}
+
+/* spacing between paragraphs so they don't stick together */
+.text p {
+    margin: 0 0 10px 0;
+}
+
+/* container for the featured image */
+.featured-image {
+    flex: 1; /* image takes a bit less space than the text */
+    min-width: 0; /* prevents layout issues in flexbox */
+}
+
+/* makes the image scale nicely inside its container */
+.featured-image img {
+    width: 100%; /* fill the container width */
+    height: 180px; /* fixed height so layout stays consistent */
+    object-fit: cover; /* crop image instead of stretching it */
+    display: block; /* removes small gaps under images */
+}
+
+
+/* gallery section that holds the video and image grid */
+.gallery {
+    display: block;
+    width: 100%;
+}
+
+/* video placed at the top of the gallery */
+.gallery .full-width {
+    width: 100%; /* span the entire container */
+    display: block;
+    height: 220px; /* fixed height so it matches the design */
+    object-fit: cover; /* keeps it looking clean without distortion */
+}
+
+/* grid layout for the rest of the gallery images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    width: 100%;
+}
+
+/* style applied to each image inside the grid */
+.gallery-grid img {
+    width: 100%; /* fill the grid cell */
+    height: 200px; /* consistent image height */
+    object-fit: cover; /* crops images to keep them neat */
+    display: block;
+}
+
+/* if there is an odd number of images, the last one stretches across both columns */
+.gallery-grid img:last-child:nth-child(odd) {
+    grid-column: span 2;
+}
