@@ -1,0 +1,140 @@
+/* ===== PAGE ===== */
+
+/* basic page setup */
+body{
+margin:0; /* removes the default space browsers add around the page */
+background:#f2388f; /* bright pink background for the whole site */
+font-family:Georgia, serif; /* using a serif font for a more classic look */
+color:#111; /* dark text so it stays readable on the pink */
+}
+
+
+/* ===== HEADER ===== */
+
+/* top area that holds the title and navigation */
+header{
+text-align:center; /* keeps everything in the header centered */
+padding:20px 10px; /* adds some space so the header doesn't feel cramped */
+}
+
+/* small decorative line image under the header */
+.divider{
+width:140px; /* keeps the divider from being too wide */
+display:block;
+margin:0 auto 10px auto; /* centres the divider image and adds space below it */
+}
+
+/* main page title */
+h1{
+margin:5px 0 10px 0; /* small spacing above and below the title */
+font-size:26px; /* large enough to stand out but not huge */
+}
+
+
+/* ===== NAVIGATION ===== */
+
+/* area where the page links sit */
+nav{
+margin-bottom:25px; /* space between the navigation and the gallery below */
+}
+
+/* styling the navigation links */
+nav a{
+margin:0 12px; /* creates space between each link */
+color:blue; /* classic link colour */
+text-decoration:underline; /* keeps it obvious that they are links */
+font-size:15px;
+}
+
+
+/* ===== MAIN LAYOUT ===== */
+
+/* container that keeps the content centered on the page */
+main{
+width:90%; /* lets the layout scale on smaller screens */
+max-width:900px; /* stops it getting too wide on big screens */
+margin:auto; /* centres the content block */
+}
+
+
+/* ===== GALLERY GRID ===== */
+
+/* grid layout used for the gallery items */
+.gallery{
+display:grid; /* using CSS grid to organise the cards */
+grid-template-columns:repeat(2, 1fr); /* creates two equal columns */
+gap:30px; /* space between the cards so they don't touch */
+}
+
+
+/* ===== CARD ===== */
+
+/* images inside each gallery card */
+.card img{
+width:100%; /* image stretches to fill the card width */
+height:auto; /* keeps the original aspect ratio */
+display:block; /* removes the small space that images sometimes leave */
+}
+
+
+/* ===== CAPTION ===== */
+
+/* caption box under each image */
+.caption{
+background:#e6dfcf; /* light background so the text stands out */
+padding:10px; /* space inside the caption box */
+}
+
+/* text inside the caption */
+.caption p{
+margin:0; /* removes default paragraph spacing */
+color:#18b7c9; /* teal coloured caption text */
+font-weight:bold; /* makes the caption stand out more */
+font-size:14px;
+}
+
+
+/* ===== BUTTON ===== */
+
+/* add-to-basket button style */
+button{
+margin-top:8px; /* little gap between caption text and button */
+padding:6px 10px; /* space inside the button */
+background:#f3f3f3; /* light grey button background */
+border:1px solid #444; /* simple border to define the button */
+cursor:pointer; /* shows the hand cursor when hovering */
+display:flex;
+align-items:center; /* keeps the icon and text vertically aligned */
+gap:6px; /* small space between icon and text */
+font-size:13px;
+}
+
+/* hover effect so users know the button is interactive */
+button:hover{
+background:#e2e2e2; /* slightly darker when hovered */
+}
+
+
+/* ===== BASKET ICON ===== */
+
+/* basket icon inside the button */
+.icon{
+width:20px;
+height:20px;
+min-width:20px;
+min-height:20px;
+max-width:20px; /* keeps the svg from resizing itself */
+max-height:20px;
+display:block;
+}
+
+
+/* ===== FOOTER ===== */
+
+/* footer area at the bottom of the page */
+footer{
+width:90%;
+max-width:900px; /* matches the main content width */
+margin:40px auto; /* centres it and adds space above */
+font-size:14px;
+}
